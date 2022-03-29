@@ -38,7 +38,18 @@
           <target>1.6</target>
         </configuration>
       </plugin>
+<plugin>
+    <groupId>org.sonarsource.scanner.maven</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>4.7.0.2747</version>
+</plugin>
 
+<profile>
+    <id>sonar</id>
+    <activation>
+        <activeByDefault>true</activeByDefault>
+    </activation>
+</profile>
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
         <configuration>
