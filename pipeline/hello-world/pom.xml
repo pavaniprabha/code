@@ -38,18 +38,23 @@
           <target>1.6</target>
         </configuration>
       </plugin>
-<plugin>
-    <groupId>org.sonarsource.scanner.maven</groupId>
-    <artifactId>sonar-maven-plugin</artifactId>
-    <version>4.7.0.2747</version>
-</plugin>
-
-<profile>
-    <id>sonar</id>
-    <activation>
-        <activeByDefault>true</activeByDefault>
-    </activation>
-</profile>
+   <plugin>
+       <groupId>org.sonarsource.scanner.maven</groupId>
+      <artifactId>sonar-maven-plugin</artifactId>
+      <version>4.7.0.2747</version>
+   </plugin>
+   <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>
+                  http://65.0.32.44:9000
+                </sonar.host.url>
+            </properties>
+      </profile>           
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
         <configuration>
